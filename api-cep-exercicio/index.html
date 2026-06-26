@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API CEP</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <main class="container">
+      <h1>
+		<i class="fa-solid fa-location-dot"></i>
+		Consultar CEP
+	  </h1>
+
+      <h3>Digite um CEP válido para consultar o endereço correspondente.</h3>
+
+      <form id="formCep">
+        <label for="cep">CEP:</label>
+        <input id="cep" type="text" placeholder="Digite um cep:" />
+        <button id="btnConsultar" type="submit">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          Consultar
+        </button>
+      </form>
+
+      <div class="container__resultado">
+        <div class="cabecalho__resultado">
+          <div class="icone__cabecalho">
+            <i class="fa-solid fa-house"></i>
+          </div>
+
+          <h2>Endereço encontrado</h2>
+        </div>
+
+        <div class="item__resultado">
+          <div class="icone">
+            <i class="fa-solid fa-road"></i>
+          </div>
+
+          <span class="titulo">Logradouro</span>
+
+          <span id="logradouro"></span>
+        </div>
+
+        <div class="item__resultado">
+          <div class="icone">
+            <i class="fa-solid fa-map-location-dot"></i>
+          </div>
+
+          <span class="titulo">Bairro</span>
+
+          <span id="bairro"></span>
+        </div>
+
+        <div class="item__resultado">
+          <div class="icone">
+            <i class="fa-solid fa-city"></i>
+          </div>
+
+          <span class="titulo">Cidade</span>
+
+          <span id="cidade"></span>
+        </div>
+
+        <div class="item__resultado">
+          <div class="icone">
+            <i class="fa-solid fa-map"></i>
+          </div>
+
+          <span class="titulo">Estado</span>
+
+          <span id="estado"></span>
+        </div>
+      </div>
+      <div class="container__info">
+        <i class="fa-solid fa-circle-info"></i>
+
+        <p>Digite um CEP de 8 dígitos e clique em Consultar.</p>
+      </div>
+
+      <p id="erro"></p>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
